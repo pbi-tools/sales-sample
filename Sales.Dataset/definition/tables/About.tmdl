@@ -32,17 +32,17 @@ table About
 		mode: import
 		source =
 				let
-				    Source = #table({ "Key", "Value" },{
+				    Source = #table({ "Key", "Value" },{
 				        { "Developed by", "Microsoft" },
 				        { "Version", "1.0" },
 				        { "Description", "Sales.pbip" },
 				        { "Last Refresh", DateTime.ToText(DateTime.LocalNow(), "yyyy-MM-dd HH:mm:ss") }
 				    }),
-				    #"Added Index" = Table.AddIndexColumn(Source, "Order", 1, 1),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Added Index",{{"Key", type text},  {"Value", type text},{"Order", Int64.Type}}),
-				    #"Reordered Columns" = Table.ReorderColumns(#"Changed Type",{"Key", "Value", "Order"})
+				    #"Added Index" = Table.AddIndexColumn(Source, "Order", 1, 1),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Added Index",{{"Key", type text},  {"Value", type text},{"Order", Int64.Type}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Changed Type",{"Key", "Value", "Order"})
 				in
-				    #"Reordered Columns"
+				    #"Reordered Columns"
 
 	annotation PBI_ResultType = Table
 

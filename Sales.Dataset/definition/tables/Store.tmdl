@@ -97,10 +97,9 @@ table Store
 		source =
 				let
 				    Source = #"RAW-Store",
-				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Name", "Store"}}),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"StoreKey", Int64.Type}, {"Store Code", type text}, {"Country", type text}, {"State", type text}, {"Store", type text}, {"Square Meters", Int64.Type}, {"Open Date", type date}, {"Close Date", type date}, {"Status", type text}})
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Name", "Store"}})
 				in
-				    #"Changed Type"
+				    #"Renamed Columns"
 
 	annotation PBI_ResultType = Table
 

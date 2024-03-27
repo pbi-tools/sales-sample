@@ -107,12 +107,14 @@ table Customer
 
 	column Birthday
 		dataType: dateTime
-		formatString: General Date
+		formatString: Long Date
 		lineageTag: afa5e191-c690-45c1-a725-41c9d3ca9434
 		summarizeBy: none
 		sourceColumn: Birthday
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column Age
 		dataType: int64
@@ -128,10 +130,9 @@ table Customer
 		source =
 				let
 				    Source = #"RAW-Customer",
-				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Name", "Customer"}}),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"CustomerKey", Int64.Type}, {"Gender", type text}, {"Customer", type text}, {"Address", type text}, {"City", type text}, {"State Code", type text}, {"State", type text}, {"Zip Code", type text}, {"Country Code", type text}, {"Country", type text}, {"Continent", type text}, {"Birthday", type datetime}, {"Age", Int64.Type}})
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Name", "Customer"}})
 				in
-				    #"Changed Type"
+				    #"Renamed Columns"
 
 	annotation PBI_ResultType = Table
 

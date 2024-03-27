@@ -290,8 +290,6 @@ table Sales
 		summarizeBy: sum
 		sourceColumn: Net Price
 
-		changedProperty = DataType
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -307,8 +305,6 @@ table Sales
 		sourceColumn: Unit Cost
 
 		changedProperty = IsHidden
-
-		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -329,8 +325,6 @@ table Sales
 		lineageTag: 0b3f913f-1587-4280-a8bb-21ab7d661086
 		summarizeBy: none
 		sourceColumn: Exchange Rate
-
-		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -357,26 +351,20 @@ table Sales
 
 	partition Sales-ddb4c40b-46fd-49ea-9a19-16e7e640a21a = m
 		mode: import
-		source = ```
+		source =
 				let
 				    Source = #"RAW-SalesDateAdjustedAndSalesRandomized",
-				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Order Number", Int64.Type}, {"Line Number", Int64.Type}, {"Order Date", type date}, {"Delivery Date", type date}, {"CustomerKey", Int64.Type}, {"StoreKey", Int64.Type}, {"ProductKey", Int64.Type}, {"Quantity", Int64.Type}, {"Unit Price", type number}, {"Net Price", type number}, {"Unit Cost", type number}, {"Currency Code", type text}, {"Exchange Rate", type number}}),
-				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Unit Price"}),
-				    
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Unit Price"}),
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Removed Columns",{{"Delivery Date", type datetime}, {"Order Date", type datetime}}),
 				    #"Filtered Rows" = Table.SelectRows(#"Changed Type1", each [Order Date] >= RangeStart and [Order Date] <= RangeEnd),
 				    #"Changed Type2" = Table.TransformColumnTypes(#"Filtered Rows",{{"Delivery Date", type date}, {"Order Date", type date}}),
-				    #"Added Custom" = Table.AddColumn(#"Changed Type2", "Environment", each Environment),
-				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom",{{"Environment", type text}, {"Time", type time}})
+				    #"Added Custom" = Table.AddColumn(#"Changed Type2", "Environment", each Environment, type text)
 				in
-				    #"Changed Type3"
-				```
+				    #"Added Custom"
 
 	annotation PBI_Id = 975ddcc4-65e2-4eb0-9c9c-2c5ef0586f0e
 
 	annotation LinkedQueryName = Sales
-
-	annotation PBI_QueryRelationships = {"columnCount":7,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Sales/Changed Type.{FK_Customer,0}","Section1/Sales/Changed Type.{FK_Product,1}","Section1/Sales/Changed Type.{FK_SalesDate,2}","Section1/Sales/Changed Type.{Quantity,3}","Section1/Sales/Changed Type.{UnitPrice,4}","Section1/Sales/Changed Type.{Discount,5}","Section1/Sales/Changed Type.{TotalAmount,6}"],"ColumnCount":7,"KeyColumnNames":[],"ColumnIdentities":["Section1/Sales/Changed Type.{FK_Customer,0}","Section1/Sales/Changed Type.{FK_Product,1}","Section1/Sales/Changed Type.{FK_SalesDate,2}","Section1/Sales/Changed Type.{Quantity,3}","Section1/Sales/Changed Type.{UnitPrice,4}","Section1/Sales/Changed Type.{Discount,5}","Section1/Sales/Changed Type.{TotalAmount,6}"],"RelationshipInfo":[]}
 
 	annotation PBI_ResultType = Table
 

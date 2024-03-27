@@ -72,8 +72,6 @@ table Product
 		summarizeBy: none
 		sourceColumn: Weight
 
-		changedProperty = DataType
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -84,8 +82,6 @@ table Product
 		summarizeBy: none
 		sourceColumn: Unit Cost
 
-		changedProperty = DataType
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -95,8 +91,6 @@ table Product
 		lineageTag: ef300027-e4eb-4c7d-9770-ab8f6dab6b15
 		summarizeBy: none
 		sourceColumn: Unit Price
-
-		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -154,10 +148,9 @@ table Product
 		source =
 				let
 				    Source = #"RAW-Product",
-				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Product Name", "Product"}}),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"ProductKey", Int64.Type}, {"Product Code", type text}, {"Product", type text}, {"Manufacturer", type text}, {"Brand", type text}, {"Color", type text}, {"Weight Unit Measure", type text}, {"Weight", type number}, {"Unit Cost", type number}, {"Unit Price", type number}, {"Subcategory Code", type text}, {"Subcategory", type text}, {"Category Code", type text}, {"Category", type text}})
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Product Name", "Product"}})
 				in
-				    #"Changed Type"
+				    #"Renamed Columns"
 
 	annotation PBI_ResultType = Table
 

@@ -1,3 +1,4 @@
-database
+database Database
 	compatibilityLevel: 1601
+	compatibilityMode: PowerBI
 
