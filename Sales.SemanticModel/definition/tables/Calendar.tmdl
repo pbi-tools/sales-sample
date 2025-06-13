@@ -300,11 +300,9 @@ table Calendar
 		annotation UnderlyingDateTimeDataType = Date
 
 	column 'Date (Year-Month)' = DATE([Year], [Month (#)],1)
-		dataType: dateTime
 		formatString: mmm yyyy
 		lineageTag: 0e65a7a5-6c15-437d-8333-10653d8d673f
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 

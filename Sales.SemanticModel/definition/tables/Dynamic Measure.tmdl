@@ -86,53 +86,43 @@ table 'Dynamic Measure'
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Code
-		dataType: int64
 		formatString: 0
 		lineageTag: a5db8d3b-70af-483d-bcab-5c0fcc7478c2
 		summarizeBy: none
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Code]
 
 		annotation SummarizationSetBy = User
 
 	column Order
-		dataType: int64
 		formatString: 0
 		lineageTag: c7824b9c-021c-4bff-b363-c04b3cb2c681
 		summarizeBy: none
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Order]
 
 		annotation SummarizationSetBy = User
 
 	column Measure
-		dataType: string
 		lineageTag: d8e3ae78-fda2-49e6-b8cb-b6257e927261
 		summarizeBy: none
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Measure]
 
 		annotation SummarizationSetBy = Automatic
 
 	column Area
-		dataType: string
 		lineageTag: 364ae39d-73bd-4527-91e4-0e649a23d8a7
 		summarizeBy: none
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Area]
 
 		annotation SummarizationSetBy = Automatic
 
 	column Format
-		dataType: string
 		lineageTag: ec17695c-dc59-4674-bdaa-bbdeb4131593
 		summarizeBy: none
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Format]
 
 		annotation SummarizationSetBy = Automatic

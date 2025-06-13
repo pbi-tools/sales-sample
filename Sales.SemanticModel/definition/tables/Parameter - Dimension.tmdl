@@ -2,10 +2,8 @@ table 'Parameter - Dimension'
 	lineageTag: 29294de5-e93a-47f4-bd78-26ec8efe7786
 
 	column 'Parameter - Dimension'
-		dataType: string
 		lineageTag: f29057e2-1184-48f8-b6c5-08f85cfd5ec1
 		summarizeBy: none
-		isDataTypeInferred
 		sourceColumn: [Value1]
 		sortByColumn: 'Parameter - Dimension Order'
 
@@ -15,11 +13,9 @@ table 'Parameter - Dimension'
 		annotation SummarizationSetBy = Automatic
 
 	column 'Parameter - Dimension Fields'
-		dataType: string
 		isHidden
 		lineageTag: dc604c44-bcb1-44cd-acb7-55201a651d63
 		summarizeBy: none
-		isDataTypeInferred
 		sourceColumn: [Value2]
 		sortByColumn: 'Parameter - Dimension Order'
 
@@ -32,12 +28,10 @@ table 'Parameter - Dimension'
 		annotation SummarizationSetBy = Automatic
 
 	column 'Parameter - Dimension Order'
-		dataType: int64
 		isHidden
 		formatString: 0
 		lineageTag: 2102f8c8-0503-42f5-ac07-b1a606810a4a
 		summarizeBy: sum
-		isDataTypeInferred
 		sourceColumn: [Value3]
 
 		annotation SummarizationSetBy = Automatic

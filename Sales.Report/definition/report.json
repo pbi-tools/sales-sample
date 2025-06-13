@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/2.1.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY23SU04",
@@ -12,7 +12,6 @@
       "type": "RegisteredResources"
     }
   },
-  "layoutOptimization": "PhonePortrait",
   "objects": {
     "outspacePane": [
       {
@@ -35,6 +34,9 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "FilterByList507A2DBEC31244C8AAABDE9BA541F723"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",
@@ -65,11 +67,12 @@
     }
   ],
   "settings": {
-    "exportDataMode": "AllowSummarizedAndUnderlying",
     "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarizedAndUnderlying",
     "defaultFilterActionIsDataFilter": true,
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
+    "allowInlineExploration": true,
     "useEnhancedTooltips": true
   },
   "slowDataSourceSettings": {
@@ -78,8 +81,5 @@
     "isFilterSelectionsButtonEnabled": false,
     "isFieldWellButtonEnabled": false,
     "isApplyAllButtonEnabled": false
-  },
-  "publicCustomVisuals": [
-    "FilterByList507A2DBEC31244C8AAABDE9BA541F723"
-  ]
+  }
 }

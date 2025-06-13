@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "4a9f9e8013c4b3d2ed84",
   "position": {
     "x": 32.098259979529168,
     "y": 80.57318321392016,
     "z": 0,
-    "width": 224.03275332650972,
     "height": 111.36131013306039,
+    "width": 224.03275332650972,
     "tabOrder": 0
   },
   "visual": {
@@ -163,6 +163,7 @@
             "Property": "Smart Calc"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

@@ -1,7 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmarkd2402dab4df672d2c479",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "Bookmark 2",
+  "name": "Bookmarkd2402dab4df672d2c479",
+  "options": {
+    "targetVisualNames": [
+      "5acb1caf298449a8acb4"
+    ]
+  },
   "explorationState": {
     "version": "1.3",
     "activeSection": "ReportSection89a9619c7025093ade1c",
@@ -167,6 +172,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "155538cfcdf2bbd3df69",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Sales Amount"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -251,6 +271,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "a3f21cd79c243ce9e919",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Margin"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -330,6 +365,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "18a3dff01d6f2e226654",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Sales Amount Avg per Day"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -439,6 +489,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "192e7e93325149bc482f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "# Customers (with Sales)"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -463,6 +528,25 @@
             }
           },
           "8b8727ff328bdc49692c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "5a43a4bab8f14ef443e2",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "slicer",
               "objects": {},
@@ -514,6 +598,66 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "758891e7e8a6380ea874",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Sales Amount"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "44f40344f02c2e5b9967",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Product"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6e56fac68c2406b13214",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Brand"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e0ffe9cb0b672d1e796b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer"
+                        }
+                      },
+                      "Property": "Gender"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -552,6 +696,100 @@
             }
           },
           "484fbdd73143c5bf71fa": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a84c39fe26c62d29200d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4a74734b7e0d60dff7d4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fc506ccad31011f349f4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Sales Amount"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "55cda50bd2fa026c6b6f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Sales Amount (LY)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1b403817fd4dd6330125",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Sales Amount (12M average)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "694a8e8625adb5e159fb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Margin"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "lineClusteredColumnComboChart",
               "objects": {},
@@ -610,6 +848,70 @@
             }
           },
           "4b18758374093c2e23fb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "278279e975a1361a1bee",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5b7e27e02178b89e4bd1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Store"
+                        }
+                      },
+                      "Property": "Store"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "29c5b6e3534facdb7cff",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Sales Amount"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "835ce2b5ffcbf2c8c40d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "# Customers (with Sales)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "scatterChart",
               "objects": {},
@@ -645,6 +947,85 @@
             }
           },
           "5acb1caf298449a8acb4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "15fa9d8e53606eb9c727",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Sales Amount"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "906a5ea615603495d38b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Sales Amount (LY)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "806b6825ebc76404897e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Category"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "27b914d22d1f97cbeb30",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Subcategory"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "18073f20f6898f1071a8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Product"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "clusteredBarChart",
               "objects": {},
@@ -741,6 +1122,26 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "9c6f2b4cdca40279dd4f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "About"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -750,6 +1151,30 @@
             }
           },
           "624827fbb3e3bd2b52a0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9bf85370af392daeeec9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Sales"
+                            }
+                          },
+                          "Property": "Environment"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "card",
               "objects": {}
@@ -782,10 +1207,5 @@
         ]
       }
     }
-  },
-  "options": {
-    "targetVisualNames": [
-      "5acb1caf298449a8acb4"
-    ]
   }
 }

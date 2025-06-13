@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "ReportSectiond90903559771e58905a1",
   "displayName": "Sales Geo",
   "displayOption": "FitToPage",
@@ -20,6 +20,8 @@
             "Property": "Year"
           }
         },
+        "type": "Categorical",
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -34,8 +36,7 @@
               }
             }
           ]
-        },
-        "howCreated": "User"
+        }
       },
       {
         "name": "Filter78bda1908a0bd749d86a",
@@ -50,6 +51,7 @@
             "Property": "Category"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -65,6 +67,7 @@
             "Property": "Subcategory"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -80,6 +83,7 @@
             "Property": "Store"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       }
     ],

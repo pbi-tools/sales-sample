@@ -2,10 +2,8 @@ table 'Parameter - Measure'
 	lineageTag: eee26640-bfec-44ed-b1e7-d56562bc25ed
 
 	column 'Parameter - Measure'
-		dataType: string
 		lineageTag: f2f4b00e-fa13-46c5-9726-16717f325e26
 		summarizeBy: none
-		isDataTypeInferred
 		sourceColumn: [Value1]
 		sortByColumn: 'Parameter - Measure Order'
 
@@ -15,11 +13,9 @@ table 'Parameter - Measure'
 		annotation SummarizationSetBy = Automatic
 
 	column 'Parameter - Measure Fields'
-		dataType: string
 		isHidden
 		lineageTag: 4787b049-3037-4007-9719-bfeed93a7cff
 		summarizeBy: none
-		isDataTypeInferred
 		sourceColumn: [Value2]
 		sortByColumn: 'Parameter - Measure Order'
 
@@ -32,12 +28,10 @@ table 'Parameter - Measure'
 		annotation SummarizationSetBy = Automatic
 
 	column 'Parameter - Measure Order'
-		dataType: int64
 		isHidden
 		formatString: 0
 		lineageTag: 5898d688-d0af-4285-9d33-3a41d2401e4b
 		summarizeBy: sum
-		isDataTypeInferred
 		sourceColumn: [Value3]
 
 		annotation SummarizationSetBy = Automatic
